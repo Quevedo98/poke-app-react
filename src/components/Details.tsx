@@ -6,8 +6,8 @@ interface DetailsProps {
 
 export const Details = ({ data }: DetailsProps) => {
   return (
-    <div className='container mx-auto px-3 mt-6 max-w-[1200px] grid sm:grid-cols-2 gap-6 '>
-      <div className='card card-compact max-w-[400px] bg-base-100 shadow-xl'>
+    <div className='container mx-auto px-3 mt-6 max-w-[1200px] grid sm:grid-cols-2 gap-y-6 '>
+      <div className='card card-compact max-w-[400px] pt-2 bg-neutral shadow-xl'>
         <figure>
           <img
             style={{ width: 'auto', maxHeight: '150px' }}
@@ -19,7 +19,7 @@ export const Details = ({ data }: DetailsProps) => {
           <h3 className='card-title capitalize'>{data?.name}</h3>
         </div>
       </div>
-      <div className='container shadow-lg rounded-2xl p-10 max-w-7xl'>
+      <div className='container bg-neutral shadow-lg rounded-2xl p-10 max-w-full'>
         <p>
           <span className='font-bold'>Base Experience: </span>
           {data?.base_experience}
