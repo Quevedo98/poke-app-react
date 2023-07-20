@@ -31,7 +31,7 @@ export const PokeCard = ({
   }, []);
 
   return (
-    <div className='card card-compact max-w-[400px] bg-base-100 shadow-xl'>
+    <div className='card bg-neutral pt-2 card-compact max-w-[400px] shadow-xl'>
       <figure>
         <img
           style={{ width: 'auto', maxHeight: '150px' }}
@@ -46,7 +46,7 @@ export const PokeCard = ({
           {pokemonReceived?.height}
         </p>
         {/* <div className='card-actions justify-end'>
-          <button className='btn btn-primary'>Buy Now</button>
+          <button className='btn btn-primary'>Add</button>
         </div> */}
       </div>
     </div>

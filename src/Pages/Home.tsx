@@ -32,17 +32,17 @@ export const Home = () => {
               onChange={handleChange}
               className='input input-bordered w-full max-w-sm'
               type='text'
-              placeholder='Search for a Pokémon by name'
+              placeholder='Search for a Pokémon by name or id'
             />
           </form>
           {error && <p>{error}</p>}
         </div>
       </header>
 
-      {/* cards */}
+      {/* Cards */}
       <main>
         <div
-          className='container my-8 mx-auto max-w-full px-4'
+          className='container my-16 mx-auto max-w-full px-4'
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',

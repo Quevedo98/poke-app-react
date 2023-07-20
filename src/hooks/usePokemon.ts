@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { getAllPokemon, getApokemonByName } from '../requests/Pokemon';
+import { getAllPokemon, getAPokemonByNameAndId } from '../requests/Pokemon';
 import { Pokemon } from '../interfaces/pokemon-full';
 import { AllPokemonResponse } from '../interfaces/types';
 
@@ -17,7 +17,7 @@ export const usePokemon = () => {
         setNotFound(false);
       } else {
         setPokemonList(undefined);
-        const request = await getApokemonByName(search);
+        const request = await getAPokemonByNameAndId(search);
         setPokemon(request);
         setNotFound(false);
       }
