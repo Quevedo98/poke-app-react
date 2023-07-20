@@ -3,8 +3,10 @@
 import allPokemon from './mockup/allPokemon.json';
 import './App.css';
 import { PokeCard } from './components/PokeCard';
+import { toast } from 'react-toastify';
 
 function App() {
+  toast('Hello world');
   return (
     <>
       <header>
