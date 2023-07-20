@@ -1,5 +1,5 @@
 import { PokeCard } from '../components/PokeCard';
-import { ChangeEvent, useCallback } from 'react';
+import { ChangeEvent, useCallback, useEffect } from 'react';
 import { useSearch } from '../hooks/useSearch';
 import { usePokemon } from '../hooks/usePokemon';
 import debounce from 'just-debounce-it';
@@ -11,7 +11,7 @@ export const Home = () => {
   const debounceGetPokemons = useCallback(
     debounce((value: any) => {
       getPokemons({ search: value });
-    }, 400),
+    }, 300),
     [],
   );
 
@@ -20,6 +20,9 @@ export const Home = () => {
     setSearch(newSearch);
     debounceGetPokemons(newSearch);
   };
+  useEffect(() => {
+    debounceGetPokemons(search);
+  }, []);
 
   return (
     <>
